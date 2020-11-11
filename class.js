@@ -30,6 +30,10 @@ class Game {
     runGame() {
         // Kleur de achtergrond zwart, zodat je het kunt zien
         background("black");
+        //player
+        player[0].showPlayer();
+
+
     }
 }
 
@@ -48,6 +52,15 @@ class Player extends GameElement {
         this.strength = _strength;
     }
     //methoden
+    showPlayer() {
+        fill("red");
+        rect(this.x, this.y, this.width, this.height);
+    }
+
+    updatePlayer() {
+
+    }
+
     movePlayer() {
 
     }
@@ -81,6 +94,14 @@ class Enemy extends GameElement {
         this.strength = _strength;
     }
     //methoden
+    showEnemy() {
+
+    }
+
+    updateEnemy() {
+
+    }
+
     movementEnemy() {
 
     }
@@ -107,6 +128,10 @@ class Platform extends GameElement {
         super(_x, _y, _width, _height, _hitbox);
     }
     //methoden
+    showPlatform() {
+
+    }
+
     collisionPlatform() {
 
     }
@@ -121,6 +146,10 @@ class Finish extends GameElement {
 
     }
     //methoden
+    showFinish() {
+
+    }
+
     collisionFinish() {
 
     }
